@@ -2,7 +2,7 @@
 
 Osheen is an AI-enabled virtual trial room and emotional styling platform for online shoppers, offline boutiques, and local fashion vendors.
 
-The MVP includes a polished Next.js frontend, an Express backend, upload flows, canvas-based outfit preview simulation, optional BodyPix pose segmentation, mood-based styling suggestions, vendor catalogue management, and Firebase-ready configuration.
+The MVP includes a polished Next.js frontend, an Express backend, upload flows, canvas-based outfit preview simulation, optional BodyPix pose segmentation, mood-based styling suggestions, vendor catalogue management, Vercel-friendly API fallbacks, and Firebase-ready configuration.
 
 ## Folder Structure
 
@@ -120,10 +120,11 @@ npm run lint         # Next/TypeScript lint checks
 ## MVP Functionality
 
 - Landing page with premium startup messaging, animations, hero image, features, sustainability, MSME/vendor support, testimonials, and footer
-- Virtual try-on page with user photo upload, outfit upload, starter outfits, event backgrounds, BodyPix-assisted preview attempt, fallback outfit overlay, and mood styling suggestions
+- Virtual try-on page with user photo upload, outfit upload, starter outfits, event backgrounds, BodyPix-assisted preview attempt, fallback outfit overlay, manual fit controls, before/after visualisation, preview download, and mood styling suggestions
 - Vendor dashboard with product upload, catalogue cards, stock/price stats, and API-backed in-memory listings
 - About page with mission, vision, idea, and future roadmap
 - Contact page connected to the Express API, with demo-mode fallback
+- Next API fallback routes for `catalog`, `contact`, `styling`, and `tryon`, so the deployed frontend can still run the MVP without a separately hosted Express service
 
 ## Environment Variables
 
@@ -151,6 +152,41 @@ FIREBASE_PROJECT_ID=
 ```
 
 Firebase and Cloudinary values are optional for this MVP. The project runs in demo mode without them.
+
+For local full-stack development, keep:
+
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:4000
+```
+
+For Vercel-only deployment without the Express server, leave `NEXT_PUBLIC_API_URL` blank or unset so the frontend uses its built-in Next API routes.
+
+## GitHub + Vercel Publish
+
+This repository is already connected to:
+
+```text
+https://github.com/Osheen06/OSHEEN.git
+```
+
+To publish your current local changes to GitHub:
+
+```bash
+git status
+git add .
+git commit -m "Redesign Osheen MVP"
+git push origin main
+```
+
+For Vercel:
+
+1. Open your Vercel project for `https://osheen.vercel.app`.
+2. Connect it to the `Osheen06/OSHEEN` GitHub repo if it is not already connected.
+3. Use `frontend` as the Vercel Root Directory for the public site.
+4. Build command: `npm run build`
+5. Install command: `npm install`
+6. Leave `NEXT_PUBLIC_API_URL` empty on Vercel unless you deploy the Express backend separately.
+7. Push to `main`; Vercel should redeploy automatically.
 
 ## Development Notes
 

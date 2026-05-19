@@ -36,7 +36,7 @@ export function FileDropzone({
         readFile(event.dataTransfer.files[0]);
       }}
       className={cn(
-        "focus-ring group relative min-h-44 overflow-hidden rounded-[1.5rem] border border-dashed border-ink/16 bg-white/62 p-5 text-left shadow-glass transition hover:-translate-y-0.5 hover:bg-white",
+        "focus-ring group relative min-h-44 overflow-hidden rounded-[1.5rem] border border-dashed border-clay/20 bg-white/66 p-5 text-left shadow-panel transition hover:-translate-y-0.5 hover:bg-white",
         previewUrl && "border-solid border-blush-strong/40"
       )}
     >
@@ -45,7 +45,7 @@ export function FileDropzone({
         <img src={previewUrl} alt="" className="absolute inset-0 h-full w-full object-cover opacity-35" />
       ) : null}
       <div className="relative z-10">
-        <div className="mb-8 grid h-12 w-12 place-items-center rounded-2xl bg-ink text-pearl transition group-hover:rotate-3">
+        <div className="mb-8 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-clay to-blush-strong text-cream transition group-hover:rotate-3">
           {previewUrl ? <ImagePlus className="h-5 w-5" /> : <Upload className="h-5 w-5" />}
         </div>
         <p className="text-lg font-black text-ink">{label}</p>

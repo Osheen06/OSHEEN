@@ -6,7 +6,7 @@ export function ImpactSections() {
   return (
     <Section className="pt-8">
       <div className="grid gap-5 lg:grid-cols-2">
-        <div className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-pistachio via-pearl to-blush p-8 shadow-glass">
+        <div className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-pistachio/80 via-cream to-blush/70 p-8 shadow-aura">
           <Leaf className="mb-8 h-8 w-8 text-ink" />
           <h2 className="max-w-lg font-display text-4xl font-black leading-tight text-ink">Returns are expensive. Doubt is the real cost.</h2>
           <p className="mt-5 max-w-xl leading-8 text-ink/66">
@@ -25,14 +25,14 @@ export function ImpactSections() {
           </div>
         </div>
 
-        <div className="rounded-[2rem] bg-ink p-8 text-pearl shadow-glass">
-          <Store className="mb-8 h-8 w-8 text-blush" />
+        <div className="rounded-[2rem] border border-white/80 bg-white/70 p-8 text-ink shadow-glass backdrop-blur">
+          <Store className="mb-8 h-8 w-8 text-blush-strong" />
           <h2 className="max-w-lg font-display text-4xl font-black leading-tight">Local boutiques deserve a digital mirror too.</h2>
-          <p className="mt-5 max-w-xl leading-8 text-pearl/66">
+          <p className="mt-5 max-w-xl leading-8 text-ink/64">
             Vendors can upload products, tag moods, and create catalogues that feel premium without needing a large
             tech team. The first MVP keeps it simple and demo-ready.
           </p>
-          <ButtonLink href="/vendor" variant="dark" className="mt-8">
+          <ButtonLink href="/vendor" className="mt-8">
             Open vendor dashboard
             <ArrowRight className="h-4 w-4" />
           </ButtonLink>

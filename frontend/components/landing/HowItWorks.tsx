@@ -38,9 +38,9 @@ export function HowItWorks() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
-            className="group rounded-[2rem] border border-white/70 bg-white/64 p-7 shadow-glass backdrop-blur transition hover:-translate-y-1 hover:bg-white"
+            className="lift-card group rounded-[2rem] border border-white/80 bg-white/68 p-7 shadow-panel backdrop-blur"
           >
-            <div className="mb-8 grid h-14 w-14 place-items-center rounded-2xl bg-ink text-pearl shadow-glow transition group-hover:rotate-3">
+            <div className="mb-8 grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-clay to-blush-strong text-cream shadow-glow transition group-hover:rotate-3">
               <step.icon className="h-6 w-6" />
             </div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-blush-strong">0{index + 1}</p>

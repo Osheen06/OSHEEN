@@ -20,8 +20,8 @@ export function OutfitPicker({
           type="button"
           onClick={() => onSelect(outfit)}
           className={cn(
-            "focus-ring overflow-hidden rounded-[1.25rem] border bg-white/64 p-3 text-left shadow-glass transition hover:-translate-y-0.5",
-            selected === outfit.href ? "border-ink" : "border-white/70"
+            "focus-ring overflow-hidden rounded-[1.25rem] border bg-white/68 p-3 text-left shadow-panel transition hover:-translate-y-0.5",
+            selected === outfit.href ? "border-blush-strong/40 shadow-glow" : "border-white/70"
           )}
         >
           <div className="grid aspect-[4/5] place-items-center rounded-2xl bg-pearl">

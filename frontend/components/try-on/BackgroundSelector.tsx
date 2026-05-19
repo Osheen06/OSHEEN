@@ -20,7 +20,9 @@ export function BackgroundSelector({
           onClick={() => onChange(event.key)}
           className={cn(
             "focus-ring rounded-[1.25rem] border p-3 text-left transition hover:-translate-y-0.5",
-            value === event.key ? "border-ink bg-ink text-pearl" : "border-white/70 bg-white/62 text-ink"
+            value === event.key
+              ? "border-blush-strong/30 bg-white text-ink shadow-glow"
+              : "border-white/70 bg-white/62 text-ink shadow-panel"
           )}
         >
           <span className={cn("mb-4 block h-16 rounded-2xl bg-gradient-to-br", event.accent)} />

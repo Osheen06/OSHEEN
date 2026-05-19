@@ -13,10 +13,10 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/40 bg-pearl/80 px-4 py-3 backdrop-blur-2xl sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-clay/10 bg-cream/82 px-4 py-3 backdrop-blur-2xl sm:px-6 lg:px-8">
       <nav className="mx-auto flex max-w-7xl items-center justify-between">
         <Link href="/" className="focus-ring flex items-center gap-3 rounded-full">
-          <span className="grid h-10 w-10 place-items-center rounded-full bg-ink text-pearl shadow-glow">
+          <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-clay via-blush-strong to-sage text-cream shadow-glow">
             <Sparkles className="h-5 w-5" aria-hidden="true" />
           </span>
           <span>
@@ -25,14 +25,14 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-2 rounded-full border border-white/60 bg-white/55 p-1 shadow-glass backdrop-blur lg:flex">
+        <div className="hidden items-center gap-2 rounded-full border border-clay/10 bg-white/62 p-1 shadow-panel backdrop-blur lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
                 "focus-ring rounded-full px-4 py-2 text-sm font-semibold text-ink/64 transition hover:bg-pearl hover:text-ink",
-                pathname === item.href && "bg-ink text-pearl hover:bg-ink hover:text-pearl"
+                pathname === item.href && "bg-gradient-to-r from-clay to-blush-strong text-cream shadow-glow hover:text-cream"
               )}
             >
               {item.label}
@@ -48,7 +48,7 @@ export function Navbar() {
         </div>
 
         <button
-          className="focus-ring grid h-11 w-11 place-items-center rounded-full bg-white/70 text-ink shadow-glass lg:hidden"
+          className="focus-ring grid h-11 w-11 place-items-center rounded-full bg-white/78 text-ink shadow-panel lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label="Toggle navigation"
         >
@@ -57,7 +57,7 @@ export function Navbar() {
       </nav>
 
       {open ? (
-        <div className="mx-auto mt-3 max-w-7xl rounded-3xl border border-white/60 bg-white/80 p-3 shadow-glass backdrop-blur lg:hidden">
+        <div className="mx-auto mt-3 max-w-7xl rounded-3xl border border-clay/10 bg-white/88 p-3 shadow-glass backdrop-blur lg:hidden">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -65,7 +65,7 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className={cn(
                 "block rounded-2xl px-4 py-3 text-sm font-semibold text-ink/70",
-                pathname === item.href && "bg-ink text-pearl"
+                pathname === item.href && "bg-gradient-to-r from-clay to-blush-strong text-cream"
               )}
             >
               {item.label}

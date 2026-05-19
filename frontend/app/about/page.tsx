@@ -40,14 +40,14 @@ export default function AboutPage() {
             title="A mirror for the version of you walking into the moment."
             copy="Osheen began with a simple frustration: fashion shopping asks people to imagine too much. Will this look good on me? Will it feel right for the event? Will I regret buying it? Our answer is a warm, visual, AI-assisted trial room."
           />
-          <div className="rounded-[2rem] bg-ink p-8 text-pearl shadow-glow">
-            <p className="text-sm font-bold uppercase tracking-[0.24em] text-pearl/42">Mission</p>
+          <div className="rounded-[2rem] border border-white/80 bg-gradient-to-br from-white via-pearl to-pistachio/50 p-8 text-ink shadow-aura">
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-ink/42">Mission</p>
             <h2 className="mt-4 font-display text-4xl font-black leading-tight">Make fashion decisions feel clear, comfortable, and personal.</h2>
-            <p className="mt-6 leading-8 text-pearl/66">
+            <p className="mt-6 leading-8 text-ink/64">
               We are building for online shoppers, offline boutiques, students, founders, wedding guests, working women,
               and anyone who has ever wished the mirror could answer with kindness and precision.
             </p>
-            <ButtonLink href="/try-on" variant="dark" className="mt-8">
+            <ButtonLink href="/try-on" className="mt-8">
               Try the MVP
               <ArrowRight className="h-4 w-4" />
             </ButtonLink>
@@ -59,7 +59,7 @@ export default function AboutPage() {
         <SectionHeader eyebrow="Vision" title="From preview to personal fashion operating system." />
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {beliefs.map((belief) => (
-            <article key={belief.title} className="rounded-[1.75rem] border border-white/70 bg-white/64 p-7 shadow-glass backdrop-blur">
+            <article key={belief.title} className="lift-card rounded-[1.75rem] border border-white/80 bg-white/68 p-7 shadow-panel backdrop-blur">
               <belief.icon className="mb-8 h-7 w-7 text-blush-strong" />
               <h3 className="text-2xl font-black text-ink">{belief.title}</h3>
               <p className="mt-4 leading-7 text-ink/62">{belief.copy}</p>

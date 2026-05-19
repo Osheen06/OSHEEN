@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils";
 type Variant = "primary" | "secondary" | "ghost" | "dark";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-ink text-pearl shadow-glow hover:-translate-y-0.5 hover:bg-[#2c2229]",
-  secondary: "bg-white/70 text-ink ring-1 ring-ink/10 hover:-translate-y-0.5 hover:bg-white",
+  primary: "sheen bg-gradient-to-r from-cocoa via-clay to-blush-strong text-cream shadow-glow hover:-translate-y-0.5",
+  secondary: "bg-white/78 text-ink ring-1 ring-clay/15 hover:-translate-y-0.5 hover:bg-white hover:ring-blush-strong/30",
   ghost: "text-ink hover:bg-white/60",
-  dark: "bg-pearl text-ink hover:-translate-y-0.5 hover:bg-white"
+  dark: "bg-cream text-ink ring-1 ring-clay/15 hover:-translate-y-0.5 hover:bg-white"
 };
 
 export function Button({

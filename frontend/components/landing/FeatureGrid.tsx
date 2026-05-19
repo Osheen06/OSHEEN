@@ -15,12 +15,11 @@ const features = [
 
 export function FeatureGrid() {
   return (
-    <Section className="bg-ink text-pearl">
+    <Section className="subtle-grid bg-gradient-to-b from-cream via-pearl to-cream">
       <SectionHeader
         eyebrow="Features"
         title="A fashion-tech MVP with a heartbeat."
         copy="The prototype is intentionally light, but the user journey feels real: try-on, styling, catalogue, contact, and backend APIs."
-        tone="light"
       />
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {features.map(({ title, copy, icon: Icon }, index) => (
@@ -30,11 +29,13 @@ export function FeatureGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, delay: index * 0.04 }}
-            className="rounded-[1.75rem] border border-white/10 bg-white/[0.07] p-6 transition hover:bg-white/[0.12]"
+            className="lift-card rounded-[1.75rem] border border-white/80 bg-white/70 p-6 shadow-panel backdrop-blur"
           >
-            <Icon className="mb-8 h-6 w-6 text-blush" />
-            <h3 className="text-xl font-black">{title}</h3>
-            <p className="mt-4 leading-7 text-pearl/64">{copy}</p>
+            <div className="mb-8 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-blush to-pistachio text-ink">
+              <Icon className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-black text-ink">{title}</h3>
+            <p className="mt-4 leading-7 text-ink/62">{copy}</p>
           </motion.div>
         ))}
       </div>

@@ -32,7 +32,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={submit} className="rounded-[2rem] border border-white/70 bg-white/68 p-6 shadow-glass backdrop-blur">
+    <form onSubmit={submit} className="soft-panel rounded-[2rem] p-6">
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="grid gap-2 text-sm font-bold text-ink">
           Name

@@ -1,6 +1,6 @@
 import { createLocalSuggestions, type EventKey, type MoodKey, type StylingSuggestion } from "./mood";
 
-const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "");
 
 export type CatalogueProduct = {
   id: string;
@@ -21,7 +21,7 @@ export type CatalogueSummary = {
 };
 
 async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${apiBaseUrl}${path}`, {
+  const response = await fetch(`${apiBaseUrl ? `${apiBaseUrl}${path}` : path}`, {
     ...init,
     headers: init?.body instanceof FormData ? init.headers : { "Content-Type": "application/json", ...init?.headers },
     cache: "no-store"

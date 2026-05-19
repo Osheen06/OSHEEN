@@ -87,19 +87,19 @@ export function VendorDashboard() {
 
   return (
     <div className="grid gap-6">
-      <div className="rounded-[2rem] bg-ink p-6 text-pearl shadow-glow">
+      <div className="rounded-[2rem] border border-white/80 bg-gradient-to-br from-white via-pearl to-pistachio/55 p-6 text-ink shadow-aura">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-pearl/70">
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/72 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-ink/58 shadow-panel">
               <Sparkles className="h-4 w-4 text-blush" />
               {apiMode}
             </p>
             <h2 className="font-display text-3xl font-black leading-tight sm:text-5xl">Your boutique, but searchable by feeling.</h2>
-            <p className="mt-4 max-w-2xl leading-8 text-pearl/66">
+            <p className="mt-4 max-w-2xl leading-8 text-ink/64">
               Upload pieces, mood-tag them, track stock, and make a catalogue that feels like a stylist is standing beside the customer.
             </p>
           </div>
-          <button className="focus-ring inline-flex items-center justify-center gap-2 rounded-full bg-pearl px-5 py-3 text-sm font-black text-ink transition hover:-translate-y-0.5">
+          <button className="focus-ring inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-black text-ink shadow-panel transition hover:-translate-y-0.5">
             <Link2 className="h-4 w-4" />
             Share catalogue
           </button>
@@ -108,7 +108,7 @@ export function VendorDashboard() {
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
-          <div key={stat.label} className="rounded-[1.5rem] border border-white/70 bg-white/64 p-5 shadow-glass backdrop-blur">
+          <div key={stat.label} className="lift-card rounded-[1.5rem] border border-white/80 bg-white/68 p-5 shadow-panel backdrop-blur">
             <stat.icon className="mb-6 h-5 w-5 text-blush-strong" />
             <p className="text-2xl font-black text-ink">{stat.value}</p>
             <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-ink/46">{stat.label}</p>

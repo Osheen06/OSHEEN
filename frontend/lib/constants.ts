@@ -18,7 +18,7 @@ export const moodOptions: Array<{ key: MoodKey; label: string; description: stri
 export const eventOptions: Array<{ key: EventKey; label: string; accent: string }> = [
   { key: "wedding", label: "Wedding", accent: "from-[#F7B267] via-[#F7C7D9] to-[#FFF8F4]" },
   { key: "office", label: "Office", accent: "from-[#E9EEF3] via-[#B8D8BA] to-[#FFF8F4]" },
-  { key: "party", label: "Party", accent: "from-[#171316] via-[#443066] to-[#FF73A6]" },
+  { key: "party", label: "Party", accent: "from-[#F7C7D9] via-[#D95783] to-[#FFF8F4]" },
   { key: "casual", label: "Casual", accent: "from-[#FFF8F4] via-[#F7C7D9] to-[#B8D8BA]" }
 ];
 

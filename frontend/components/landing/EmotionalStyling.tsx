@@ -23,7 +23,7 @@ export function EmotionalStyling() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.05 }}
-              className="rounded-[1.5rem] border border-white/70 bg-white/62 p-5 shadow-glass backdrop-blur"
+              className="lift-card rounded-[1.5rem] border border-white/80 bg-white/68 p-5 shadow-panel backdrop-blur"
             >
               <div className="mb-8 flex items-center justify-between">
                 <Heart className="h-5 w-5 text-blush-strong" />
