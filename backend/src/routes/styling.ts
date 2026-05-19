@@ -1,9 +1,6 @@
-import { Router } from "express";
-import { createStylingSuggestions, stylingRequestSchema } from "../services/stylingEngine.js";
+// backend/src/routes/styling.ts  — only the handler changes
 
-export const stylingRouter = Router();
-
-stylingRouter.post("/suggestions", (request, response) => {
+stylingRouter.post("/suggestions", async (request, response) => {
   const parsed = stylingRequestSchema.safeParse(request.body);
 
   if (!parsed.success) {
@@ -13,5 +10,11 @@ stylingRouter.post("/suggestions", (request, response) => {
     });
   }
 
-  return response.json(createStylingSuggestions(parsed.data));
+  try {
+    const result = await createStylingSuggestions(parsed.data);
+    return response.json(result);
+  } catch (err) {
+    console.error(err);
+    return response.status(500).json({ message: "Styling engine failed." });
+  }
 });
