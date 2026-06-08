@@ -1,4 +1,7 @@
-// backend/src/routes/styling.ts  — only the handler changes
+import { Router } from "express";
+import { createStylingSuggestions, stylingRequestSchema } from "../services/stylingEngine.js";
+
+export const stylingRouter = Router();
 
 stylingRouter.post("/suggestions", async (request, response) => {
   const parsed = stylingRequestSchema.safeParse(request.body);

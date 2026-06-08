@@ -64,12 +64,15 @@ export async function createTryOnPreview(input: {
   event: EventKey;
   outfitName?: string;
   segmentationUsed?: boolean;
+  personImage?: string;
+  garmentImage?: string;
 }) {
   return apiFetch<{
     status: string;
     renderMode: string;
     previewId: string;
     styling: StylingSuggestion;
+    vtonImageUrl?: string;
   }>("/api/tryon/preview", {
     method: "POST",
     body: JSON.stringify(input)

@@ -25,19 +25,19 @@ export const eventOptions: Array<{ key: EventKey; label: string; accent: string 
 export const starterOutfits = [
   {
     name: "Luna Glass Blazer",
-    href: "/assets/outfits/glass-blazer.svg",
+    href: "/assets/outfits/glass-blazer.png",
     mood: "power",
     tag: "office"
   },
   {
     name: "Mehfil Sunset Drape",
-    href: "/assets/outfits/sunset-drape.svg",
+    href: "/assets/outfits/sunset-drape.png",
     mood: "festive",
     tag: "wedding"
   },
   {
     name: "Moonlit Slip Set",
-    href: "/assets/outfits/moon-slip.svg",
+    href: "/assets/outfits/moon-slip.png",
     mood: "bold",
     tag: "party"
   }
