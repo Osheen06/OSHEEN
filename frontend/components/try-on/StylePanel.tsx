@@ -47,7 +47,7 @@ export function SuggestionCard({ suggestion }: { suggestion: StylingSuggestion }
           <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-clay to-blush-strong text-cream">
             <Sparkles className="h-5 w-5" />
           </div>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">Osheen's Styling Brain</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">Osheen&apos;s Styling Brain</span>
         </div>
         <span className="rounded-full bg-gradient-to-r from-emerald-500/10 to-teal-500/15 border border-emerald-500/20 px-3 py-1 text-xs font-bold text-emerald-700">
           {suggestion.confidenceScore}% Match

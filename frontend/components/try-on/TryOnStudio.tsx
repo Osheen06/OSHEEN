@@ -238,7 +238,7 @@ export function TryOnStudio() {
                   <WandSparkles className="mx-auto mb-5 h-12 w-12 text-blush-strong" />
                   <p className="text-3xl font-black tracking-tight">Fashion should feel certain.</p>
                   <p className="mx-auto mt-3 max-w-sm leading-relaxed text-ink/60">
-                    Click "Generate preview" to run IDM-VTON AI and see exactly how this clothing fits your body shape.
+                    Click &quot;Generate preview&quot; to run IDM-VTON AI and see exactly how this clothing fits your body shape.
                   </p>
                 </motion.div>
               )}
